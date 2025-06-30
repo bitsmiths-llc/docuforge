@@ -13,7 +13,7 @@ services:
       timeout: 5s
       retries: 5
     volumes:
-      - database:/var/lib/postgresql/data
+      - database_clean:/var/lib/postgresql/data
 
   documenso:
     image: documenso/documenso:latest
@@ -43,4 +43,4 @@ services:
       - ${PORT:-3000}:${PORT:-3000}
 
 volumes:
-  database:
+  database_clean:
